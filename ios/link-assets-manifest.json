@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "app/src/assets/fonts/Rasa-Bold.ttf",
+      "sha1": "1a83f36148f9c1c1224de549bfa8ce8f363275ec"
+    },
+    {
+      "path": "app/src/assets/fonts/Rasa-Medium.ttf",
+      "sha1": "531868f0e6d64724577528f1fc41db09ac82b2d4"
+    },
+    {
+      "path": "app/src/assets/fonts/Rasa-Regular.ttf",
+      "sha1": "d188f45f23113de92bb57cd467c3c9bbef719783"
+    },
+    {
+      "path": "app/src/assets/fonts/Rasa-SemiBold.ttf",
+      "sha1": "ade60dcc09b9d2a49408802c10832567442f1d27"
+    }
+  ]
+}
