@@ -28,6 +28,7 @@ export const Input = React.forwardRef(
     ref,
   ) => {
     const [focused, setFocused] = React.useState(false);
+    const [showPassword, setShowPassword] = React.useState(password ?? false);
 
     return (
       <View
@@ -58,7 +59,7 @@ export const Input = React.forwardRef(
           </View>
 
           <TextInput
-            secureTextEntry={password}
+            secureTextEntry={showPassword}
             onFocus={() => {
               onFocus();
               setFocused(true);
@@ -73,6 +74,7 @@ export const Input = React.forwardRef(
               color: inputStyle?.color,
               textAlign: centerText ? 'center' : 'left',
               flex: 1,
+              lineHeight: 26,
               ...inputStyle,
             }}
             ref={ref}
@@ -80,7 +82,12 @@ export const Input = React.forwardRef(
             value={value?.trimStart?.() ?? ''}
             {...props}
           />
-          {password && <Icons.Eye style={{width: 30}} />}
+          {password && (
+            <Icons.Eye
+              style={{width: 30}}
+              onPress={() => setShowPassword(!showPassword)}
+            />
+          )}
         </View>
         {error && (
           <Text
@@ -101,7 +108,7 @@ export const Input = React.forwardRef(
 
 const styles = StyleSheet.create({
   inputContainer: {
-    height: s(40),
+    height: s(45),
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 10,

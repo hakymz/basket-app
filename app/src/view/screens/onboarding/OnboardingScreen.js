@@ -6,7 +6,7 @@ import {Text} from '../../components/general';
 export const OnboardingScreen = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
-      <StatusBar hidden />
+      <StatusBar backgroundColor={COLORS.dark} />
       <Image
         source={require('../../../assets/images/background.png')}
         style={{
@@ -62,7 +62,11 @@ export const OnboardingScreen = ({navigation}) => {
             justifyContent: 'space-between',
             marginTop: 20,
           }}>
-          <Text fontSize={25} font={FONTS.bold} color={COLORS.primary}>
+          <Text
+            onPress={() => navigation.navigate('SignInScreen')}
+            fontSize={25}
+            font={FONTS.bold}
+            color={COLORS.primary}>
             Skip
           </Text>
           <Text

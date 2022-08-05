@@ -117,7 +117,7 @@ const HomeBottomTab = () => {
           tabBarLabel: 'Cart',
           tabBarIcon: ({focused, size}) => {
             return focused ? (
-              <TabsIcons.Cart size={size} />
+              <TabsIcons.CartActive size={size} />
             ) : (
               <TabsIcons.Cart size={size} />
             );

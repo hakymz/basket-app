@@ -140,7 +140,10 @@ export const SignInScreen = ({navigation}) => {
                 </View>
                 <View style={{alignItems: 'center'}}>
                   <Button
-                    onPress={() => handleSubmit()}
+                    onPress={() => {
+                      navigation.navigate('Home');
+                      // handleSubmit();
+                    }}
                     title="LOGIN"
                     style={{marginTop: 30, width: 280}}
                     type="dark"

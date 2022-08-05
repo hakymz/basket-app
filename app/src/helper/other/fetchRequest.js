@@ -10,6 +10,7 @@ export const fetchRequest = async ({
   showLoader = true,
   displayMessage = true,
 }) => {
+  console.log(data);
   const baseURL = url || API;
 
   const instance = axios.create({
